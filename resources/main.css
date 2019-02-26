@@ -45,11 +45,15 @@ h3::after {
   max-width: 2000px;
   height: 100%;
   width: 100%;
+  -webkit-box-shadow: 0 0 2px 2px gray;
   box-shadow: 0 0 2px 2px gray;
   margin: auto;
   overflow-x: hidden;
 }
 .container .index {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 150, 150, 0.6)), to(rgba(150, 150, 150, 0.6))), url('/resources/images/tlo.jpg');
+  background: -webkit-linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.6)), url('/resources/images/tlo.jpg');
+  background: -o-linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.6)), url('/resources/images/tlo.jpg');
   background: linear-gradient(rgba(150, 150, 150, 0.6), rgba(150, 150, 150, 0.6)), url('/resources/images/tlo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,8 +65,12 @@ h3::after {
   /* second line of header */
 }
 .container .index header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 60px 80px 0px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .container .index header .logo {
@@ -109,10 +117,20 @@ h3::after {
 .container .index .index-text {
   text-align: center;
   height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   text-shadow: 2px 2px orange;
 }
@@ -122,10 +140,20 @@ h3::after {
   white-space: nowrap;
   letter-spacing: .10em;
   margin: 0;
+  -webkit-animation: typing 7s steps(15, end), blink-caret 0.75s step-end infinite;
   animation: typing 7s steps(15, end), blink-caret 0.75s step-end infinite;
 }
 .container .index .index-text .mid-text {
+  -webkit-animation: fade 10s linear;
   animation: fade 10s linear;
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 @keyframes typing {
   from {
@@ -135,6 +163,15 @@ h3::after {
     width: 100%;
   }
 }
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 @keyframes blink-caret {
   from,
   to {
@@ -142,6 +179,25 @@ h3::after {
   }
   50% {
     border-color: orange;
+  }
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  0% {
+    opacity: 0;
+    color: transparent;
+  }
+  70% {
+    opacity: 0.5;
+    color: inherit;
+  }
+  100% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
   }
 }
 @keyframes fade {
@@ -167,6 +223,8 @@ h3::after {
   text-align: center;
 }
 .container .second .sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .container .second .sec img {
@@ -225,8 +283,13 @@ h3::after {
   text-align: center;
 }
 .container .portfolio .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .container .portfolio img {
@@ -250,6 +313,8 @@ h3::after {
   line-height: 33px;
   color: #fff;
   opacity: 0.9;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 .container .portfolio figure .fig-text {
@@ -257,7 +322,10 @@ h3::after {
   padding: 5%;
 }
 .container .portfolio figure .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 .container .portfolio figure .links a,
@@ -275,9 +343,15 @@ h3::after {
 }
 .container .contact form {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: auto;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 6% 0;
 }
@@ -309,6 +383,8 @@ h3::after {
 .container .contact form button {
   max-width: 30%;
   padding: 2% 5%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: transparent;
   color: #2F84ED;
@@ -321,6 +397,8 @@ h3::after {
 .container .contact form button:hover {
   background: #2F84ED;
   color: #fff;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
   outline: none;
 }
@@ -329,7 +407,10 @@ h3::after {
   padding: 1% 0;
 }
 .container footer .medias {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   color: #fff;
   margin: 40px auto;
@@ -370,6 +451,9 @@ h3::after {
     padding: 60px 50px 0;
   }
   .container .second .sec {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .container .second .sec div {
@@ -381,11 +465,16 @@ h3::after {
     max-width: 100%;
   }
   .container .second .sec:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
   .container .portfolio .projects {
     display: block;
     margin: auto;
+    -webkit-box-pack: unset;
+    -ms-flex-pack: unset;
     justify-content: unset;
   }
   .container .portfolio .projects img {
@@ -422,15 +511,28 @@ h3::after {
     position: absolute;
     left: 0;
     top: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     width: 100%;
   }
   .container .index header nav #hamburger ul li {
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-flex: 0.33333333;
+    -ms-flex: 0.33333333;
     flex: 0.33333333;
   }
   .container .portfolio .projects figcaption {
