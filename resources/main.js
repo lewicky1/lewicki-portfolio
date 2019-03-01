@@ -47,12 +47,12 @@ $(document).on('scroll', function () {
     const anim3Height = $anim3.outerHeight();
 
     // showing elements
-    if (scroll > anim1fromTop + anim1Height - windowHeight) {
+    if (scroll > anim1fromTop + anim1Height / 2 - windowHeight) {
         $anim1.addClass('active');
         $anim2.addClass('active');
     }
 
-    if (scroll > anim3fromTop + anim3Height / 4 - windowHeight) {
+    if (scroll > anim3fromTop + anim3Height / 2 - windowHeight) {
         $anim3.addClass('active');
     }
 
