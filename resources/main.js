@@ -24,6 +24,19 @@ $(".link3").click(function () {
     }, 1500);
 });
 
+var i = 0;
+const typeText = "Hi, I'm Mateusz!";
+
+function typeWriter() {
+    if (i < typeText.length) {
+        document.getElementById("typingEffect").innerHTML += typeText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 300);
+    }
+}
+
+$('#typingEffect').ready(typeWriter);
+
 $(document).on('scroll', function () {
 
     // scroll position
@@ -55,5 +68,4 @@ $(document).on('scroll', function () {
     if (scroll > anim3fromTop + anim3Height / 2 - windowHeight) {
         $anim3.addClass('active');
     }
-
 });

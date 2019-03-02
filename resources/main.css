@@ -60,8 +60,6 @@ h3::after {
   background-attachment: fixed;
   background-position: center;
   height: 100vh;
-  /* The typing effect */
-  /* Cursor effect */
   /* second line of header */
 }
 .container .index header {
@@ -135,51 +133,14 @@ h3::after {
   text-shadow: 2px 2px orange;
 }
 .container .index .index-text .typing h2 {
-  overflow: hidden;
   border-right: .10em solid orange;
   white-space: nowrap;
   letter-spacing: .10em;
   margin: 0;
-  -webkit-animation: typing 7s steps(15, end), blink-caret 0.75s step-end infinite;
-  animation: typing 7s steps(15, end), blink-caret 0.75s step-end infinite;
 }
 .container .index .index-text .mid-text {
   -webkit-animation: fade 10s linear;
   animation: fade 10s linear;
-}
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@-webkit-keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
 }
 @-webkit-keyframes fade {
   from {
